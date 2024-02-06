@@ -19,7 +19,7 @@ router.get("/", (req, res, next) => {
                             preco: prod.preco,
                             request: {
                                 tipo: 'GET',
-                                descricao: 'Listagem de todos os produtos',
+                                descricao: 'Lista um produto especifico',
                                 url: 'http://localhost:3000/produtos/' + prod.id_produto
                             }
                         }
@@ -51,7 +51,7 @@ router.get("/:id_produto", (req, res, next) => {
                             preco: result[0].preco,
                             request: {
                                 tipo: 'GET',
-                                descricao: 'Lista um produto pelo id',
+                                descricao: 'Lista um produto especifico',
                                 url: 'http://localhost:3000/produtos/' + result[0].id_produto
                             }
                         }
@@ -79,9 +79,9 @@ router.post("/", (req, res, next) => {
                         nome: req.body.nome,
                         preco: req.body.preco,
                         request: {
-                            tipo: 'POST',
-                            descricao: 'Cria uma produto',
-                            url: 'http://localhost:3000/produtos'
+                            tipo: 'GET',
+                            descricao: 'Lista um produto especifico',
+                            url: 'http://localhost:3000/produtos/' + prod.id_produto
                         }
                     }
                 }
@@ -111,8 +111,8 @@ router.patch("/", (req, res, next) => {
                         nome: req.body.nome,
                         preco: req.body.preco,
                         request: {
-                            tipo: 'PATCH',
-                            descricao: 'Atualiza um produto',
+                            tipo: 'GET',
+                            descricao: 'Lista um produto especifico',
                             url: 'http://localhost:3000/produtos/' + req.body.id_produto
                         }
                     }
