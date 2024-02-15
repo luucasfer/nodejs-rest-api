@@ -1,0 +1,6 @@
+projectKey=api-rest-nodejs
+serverUrl=http://localhost:9000
+serverVersion=9.6.1.59531
+dashboardUrl=http://localhost:9000/dashboard?id=api-rest-nodejs
+ceTaskId=AY2Ej_9KzKJJBFLJUibz
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AY2Ej_9KzKJJBFLJUibz
